@@ -7,6 +7,7 @@
 //
 
 #import "LXViewController.h"
+#import <Demo/LXBigButton.h>
 
 @interface LXViewController ()
 
@@ -18,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    LXBigButton *button = [[LXBigButton alloc] init];
+    [button customConfig];
+    button.frame = CGRectMake(20, 20, 80, 44);
+    [self.view addSubview:button];
 }
 
 - (void)didReceiveMemoryWarning
